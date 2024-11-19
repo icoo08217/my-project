@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: bc
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  datasource:
+    hikari:
+      username: root
+      password: rh741010!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dev
+  jpa:
+    show-sql: true
+    hibernate:
+      #      테이블 생성 방식 꼭 변경하기
+      ddl-auto: create
+      format_sql: true
