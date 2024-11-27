@@ -4,6 +4,7 @@ import com.my_project.bc.entity.Member;
 import com.my_project.bc.repository.MemberRepository;
 import com.my_project.bc.service.MemberService;
 import jakarta.transaction.Transactional;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -18,5 +19,10 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public void saveMember(Member member) {
         repository.save(member);
+    }
+
+    @Override
+    public List<Member> findAll() {
+        return repository.findAll();
     }
 }
